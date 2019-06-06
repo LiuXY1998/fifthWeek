@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>箭头函数</title>
+</head>
+<body>
+<script>
+    function fn(name,age) {
+        return {name,age};
+    }
+    let a=(v,w)=>{
+        let u =v+w;
+        return u;
+    };
+
+    let a1  = v =>v;
+    let a2 =(name,age)=>({name,age});
+
+    console.log(fn('zhangsan', 18));
+    console.log(a2('zhangsan', 18));
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>storage</title>
+</head>
+<body>
+<script>
+    let {name,age} ={name:"",age:""};
+    // localStorage.setItem("name","zhangsan");
+    // localStorage.setItem("age","age");
+    // localStorage.sex="nan";
+    // localStorage.removeItem("age");
+    // let todolist ="[{id :1,name:'zhangsan'},{id:2 ,name:'lisi'}]";
+    // todolist =JSON.parse( todolist);
+    // console.log(todolist);
+
+    let date =new Date();
+    date.setDate(date.getDate() +7);
+    document.cookie="name=zhangsan";
+    document.cookie="age=18";
+    document.cookie="sex=nan;expires=" +date.toUTCString();
+
+    console.log(document.cookie);
+
+    function getCookie(key) {
+        let cookies =document.cookie;
+        let arr = cookies.split("; ");
+        let value ='';
+
+        arr.forEach(ele=>{
+            let [keys,value]=ele.split("=");
+
+            keys == key && (value = values);
+        });
+        return value;
+    }
+
+
+</script>
+
+</body>
+</html>
